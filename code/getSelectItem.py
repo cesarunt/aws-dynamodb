@@ -1,4 +1,5 @@
 import boto3
+import sys
 
 # Get the service resource.
 dynamodb = boto3.resource('dynamodb', region_name='us-west-2')
@@ -20,4 +21,6 @@ try:
 except Exception as e:
     item = "Item no encontrado"
 
-print(item)
+print(item, flush=False)
+sys.stdout.write("This is my string")
+sys.stdout.flush()
