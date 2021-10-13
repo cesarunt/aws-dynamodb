@@ -9,10 +9,13 @@ cfg = __C
 __C.GLOBAL = edict()
 
 # development environment:      dev / prod
-__C.GLOBAL.ENV = 'prod'
+__C.GLOBAL.ENV = 'dev'
 
 # set the table's name on aws
 __C.GLOBAL.TABLE = 'users'
+
+# set the region's name on aws
+__C.GLOBAL.REGION = 'us-west-2'
 
 # set the information for new item (person)
 _item = {

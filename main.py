@@ -7,7 +7,6 @@ try:
     import os
     import sys
     import boto3
-    import datetime
 except Exception as e:
     print("Faltan algunos módulos")
 
@@ -53,7 +52,7 @@ def main():
     # INSERT OR UPDATE
     _user = aws.select(_item)
     
-    if _user != None :
+    if _user :
         aws.update(_item)
     else:
         aws.register(_item)
